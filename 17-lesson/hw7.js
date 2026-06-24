@@ -4,7 +4,7 @@ function toBinary(num){
         str += num % 2
         num = Math.floor(num / 2)
     };
-    return str;
+    return str.split("").reverse().join("");
 };
 
-console.log(toBinary(6));
+console.log(toBinary(10));
