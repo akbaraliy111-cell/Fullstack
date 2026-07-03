@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aziz Karimov",
+      "email": "aziz.karimov@example.com",
+      "age": 27,
+      "city": "Toshkent",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Dilnoza Yusupova",
+      "email": "dilnoza.yusupova@example.com",
+      "age": 24,
+      "city": "Samarqand",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "name": "Sardor Rashidov",
+      "email": "sardor.rashidov@example.com",
+      "age": 31,
+      "city": "Buxoro",
+      "isActive": false
+    },
+    {
+      "id": 4,
+      "name": "Malika Tosheva",
+      "email": "malika.tosheva@example.com",
+      "age": 29,
+      "city": "Farg'ona",
+      "isActive": true
+    },
+    {
+      "id": 5,
+      "name": "Jasur Nazarov",
+      "email": "jasur.nazarov@example.com",
+      "age": 22,
+      "city": "Andijon",
+      "isActive": false
+    }
+  ]
+}
