@@ -1,0 +1,21 @@
+[
+  {
+    "id": "1",
+    "username": "bolta"
+  },
+  {
+    "id": 6,
+    "first_name": "Akbar",
+    "last_name": "Abduganiyev"
+  },
+  {
+    "id": "7",
+    "name": "Komron",
+    "age": 21
+  },
+  {
+    "id": 8,
+    "name": "Aziza",
+    "age": 21
+  }
+]
