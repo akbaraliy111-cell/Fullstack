@@ -1,21 +1,21 @@
 import { join } from 'path';
-import { readFile, writeFile } from 'fs/promises';
+import { writeFile, readFile } from 'fs/promises';
 
-const filePath = join(process.cwd(), 'users.json');
+const filePath = join(process.cwd(), 'products.json');
 
 export async function getData() {
     try {
         const data = await readFile(filePath, 'utf-8');
         return data ? JSON.parse(data) : [];
     } catch (error) {
-        console.log(`error on get Data:`, error);
-    }
+        console.log(`Error on read json-file: `, error);
+    };
 };
 
-export async function addData(data) {
+export async function setData(data) {
     try {
         await writeFile(filePath, JSON.stringify(data, null, 2));
     } catch (error) {
-        console.log('Error on add Data:', error)
-    }
-}
+        console.log(`Error on write json-file:`, error);
+    };
+};
