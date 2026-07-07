@@ -1,52 +1,47 @@
 [
   {
-    "id": 1,
-    "title": "Headphones",
-    "price": 130
-  },
-  {
     "id": 2,
-    "title": "Keyboard",
-    "price": 90
+    "name": "Shoes",
+    "price": 120
   },
   {
     "id": 3,
-    "title": "Shoes",
-    "price": 110
-  },
-  {
-    "id": 4,
-    "title": "Watch",
-    "price": 250
-  },
-  {
-    "id": 5,
-    "title": "Backpack",
+    "name": "Wallet",
     "price": 45
   },
   {
-    "id": 6,
-    "title": "Mouse",
+    "id": 4,
+    "name": "Watch",
+    "price": 200
+  },
+  {
+    "id": 5,
+    "name": "Bottle",
     "price": 25
   },
   {
+    "id": 6,
+    "name": "Backpack",
+    "price": 60
+  },
+  {
     "id": 7,
-    "title": "Laptop",
-    "price": 999
+    "name": "Keyboard",
+    "price": 75
   },
   {
     "id": 8,
-    "title": "Phone",
-    "price": 699
+    "name": "Mouse",
+    "price": 30
   },
   {
     "id": 9,
-    "title": "Bottle",
+    "name": "Cap",
     "price": 15
   },
   {
     "id": 10,
-    "title": "Glasses",
-    "price": 60
+    "name": "T-Shirt",
+    "price": 20
   }
 ]

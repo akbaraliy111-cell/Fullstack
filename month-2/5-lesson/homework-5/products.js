@@ -31,16 +31,36 @@ createServer(async (req, res) => {
         // update
         else if (req.method === 'PUT' && req.url.startsWith(`/products`)) {
             const id = req.url.split('/')[2];
-            const index = data.findIndex(el => el.id )
-
-
+            const index = data.findIndex(el => el.id == id);
+            if (index === -1) {
+                return res.writeHead(404).end(JSON.stringify({
+                    message: 'Not found'
+                }))
+            };
+            let body = '';
+            req.on('data', (chunk) => {
+                body += chunk;
+            });
+            req.on('end', async () => {
+                data[index] = { id, ...JSON.parse(body) };
+                await setData(data);
+                return res.writeHead(200).end(JSON.stringify(data[index]));
+            });
         }
         // delete
-        else if (req.method === 'DELETE' && req.url === '/products') {
-
+        else if (req.method === 'DELETE' && req.url.startsWith(`/products`)) {
+            const id = req.url.split('/')[2];
+            const index = data.findIndex(el => el.id == id);
+            if (index === -1) {
+                return res.writeHead(404).end(JSON.stringify({
+                    message: 'User id not found'
+                }));
+            } else {
+                data.splice(index, 1);
+                await setData(data);
+                return res.writeHead(200).end(JSON.stringify({ message: 'user deleted' }))
+            }
         }
-
-
         else {
             return res.writeHead(404).end(JSON.stringify({ message: "Page not found" }));
         }
