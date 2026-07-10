@@ -1,13 +1,14 @@
-import bookController from "../controller/book.controller.js";
-import { Router } from "express";
+import { Router } from 'express';
+
+import controller from '../controller/book.controller.js';
 
 const router = Router();
 
 router
-    .post('/', bookController.create)
-    .get('/', bookController.findAll)
-    .get('/:id', bookController.findBy)
-    .delete('/:id', bookController.delete)
-    .patch('/:id', bookController.update)
+    .post('/', controller.create)
+    .get('/', controller.findAll)
+    .get('/:id', controller.findBy)
+    .patch('/:id', controller.update)
+    .delete('/:id', controller.delete);
 
 export default router;

@@ -1,10 +1,10 @@
-import { model, Types, Schema } from 'mongoose';
+import { Schema, model, Types } from "mongoose";
 
 const book = new Schema({
     id: { type: Types.ObjectId },
-    name: { type: String , unique: true},
-    publishedYear: { type: Date },
-    genre: { type: String }
+    title: { type: String },
+    genre: { type: String },
+    author: { type: Types.ObjectId, ref: 'Author'}
 }, {
     timestamps: true,
     versionKey: false
